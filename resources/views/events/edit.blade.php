@@ -3,27 +3,27 @@
 
         <h1 class="text-2xl font-bold mb-4">Edit Event</h1>
 
-        <form action="{{ route('events.update', $event->id) }}" method="POST" enctype="multipart/form-data">>
+        <form action="{{ route('events.update', $event->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 
             <div class="mb-4">
-                <label>Title</label>
+                <label>Nama</label>
                 <input type="text" name="title" value="{{ $event->title }}" class="w-full border rounded px-3 py-2">
             </div>
 
             <div class="mb-4">
-                <label>Location</label>
+                <label>Lokasi</label>
                 <input type="text" name="location" value="{{ $event->location }}"
                     class="w-full border rounded px-3 py-2">
             </div>
 
             <div class="mb-4">
-                <label class="block mb-1">Category</label>
+                <label class="block mb-1">Kategori</label>
 
                 <select name="category_id" class="w-full border rounded px-3 py-2">
 
-                    <option value="">Select Category</option>
+                    <option value="">Pilih Kategori</option>
 
                     @foreach($categories as $category)
                     <option value="{{ $category->id }}" {{ $event->category_id == $category->id ? 'selected' : '' }}>
@@ -35,18 +35,18 @@
             </div>
 
             <div class="mb-4">
-                <label>Date</label>
+                <label>Tanggal</label>
                 <input type="date" name="date" value="{{ $event->date }}" class="w-full border rounded px-3 py-2">
             </div>
 
             <div class="mb-4">
-                <label>Description</label>
+                <label>Deskripsi</label>
                 <textarea name="description"
                     class="w-full border rounded px-3 py-2">{{ $event->description }}</textarea>
             </div>
 
             <div class="mb-4">
-                <label class="block mb-1">Current Image</label>
+                <label class="block mb-1">Gambar</label>
 
                 @if($event->image)
                 <img src="{{ asset('storage/' . $event->image) }}" class="w-48 rounded mb-2">
@@ -56,7 +56,7 @@
             </div>
 
             <div class="mb-4">
-                <label class="block mb-1">Change Image</label>
+                <label class="block mb-1">Ganti Gambar</label>
                 <input type="file" name="image">
             </div>
 

@@ -28,12 +28,16 @@
                 {{-- Event Info --}}
                 <div class="space-y-2 text-gray-600 mb-6">
                     <p>
-                        <span class="font-semibold">Date:</span>
+                        <span class="font-semibold">Penyelenggara:</span>
+                        {{ $event->user->name }}
+                    </p>
+                    <p>
+                        <span class="font-semibold">Tanggal:</span>
                         {{ \Carbon\Carbon::parse($event->date)->format('d M Y') }}
                     </p>
 
                     <p>
-                        <span class="font-semibold">Location:</span>
+                        <span class="font-semibold">Lokasi:</span>
                         {{ $event->location }}
                     </p>
                 </div>
@@ -41,7 +45,7 @@
                 {{-- Description --}}
                 <div class="mb-8">
                     <h2 class="text-xl font-semibold mb-2 text-gray-800">
-                        Description
+                        Deskripsi
                     </h2>
 
                     <p class="text-gray-700 leading-relaxed">
@@ -74,7 +78,7 @@
                         @method('DELETE')
 
                         <button class="px-5 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700">
-                            Cancel Participation
+                            Batalkan Partisipasi
                         </button>
                     </form>
                     @endif

@@ -58,6 +58,7 @@ class EventController extends Controller
         'date' => $request->date,
         'organizer_id' => auth()->id(),
         'image' => $path,
+        'category_id' => $request->category_id,
     ]);
 
     return redirect()->route('dashboard');

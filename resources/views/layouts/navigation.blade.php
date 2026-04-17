@@ -39,15 +39,15 @@
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
+                            {{ __('Profil') }}
                         </x-dropdown-link>
 
                         <x-dropdown-link :href="route('events.my')">
-                            {{ __('My Events') }}
+                            {{ __('Event Saya') }}
                         </x-dropdown-link>
 
                         <x-dropdown-link :href="route('registrations.index')">
-                            {{ __('My Registrations') }}
+                            {{ __('Event yang Saya Ikuti') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->

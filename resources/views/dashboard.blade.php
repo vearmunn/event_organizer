@@ -8,7 +8,7 @@
             <h1 class="font-semibold text-xl text-gray-800 leading-tight">Selamat Datang, {{ auth()->user()->name }}
             </h1>
             <a href="{{ route('events.create') }}" class="px-4 py-2 bg-blue-600 text-white font-bold rounded">
-                Create Event
+                Buat Event
             </a>
 
         </div>
@@ -79,7 +79,7 @@
                                 <br>
                                 <a href="{{ route('events.show', $event->id) }}"
                                     class="inline-block px-4 py-2 mt-3 bg-blue-600 text-white rounded hover:bg-blue-700">
-                                    View Details
+                                    Lihat Event
                                 </a>
 
                             </div>
